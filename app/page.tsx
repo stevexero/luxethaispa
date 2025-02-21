@@ -8,7 +8,7 @@ export default function Home() {
         <section className='grid lg:grid-cols-2'>
           <div
             className='relative w-full bg-no-repeat bg-cover bg-center'
-            style={{ backgroundImage: "url('/sideimg.png')" }}
+            style={{ backgroundImage: "url('/sideimg2.png')" }}
           ></div>
           <div className='flex items-center justify-center bg-primary p-24 pb-0'>
             <div className='flex flex-col'>
