@@ -85,7 +85,10 @@ export default function NavLinks() {
 
       {/* Tablet & Desktop */}
       <div className='w-full hidden md:flex items-center justify-evenly py-4 bg-primary dark:bg-primary-dark'>
-        <div className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'>
+        <div
+          className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'
+          onClick={handleMenuToggle}
+        >
           <RiMenuFold2Fill />
           <p className='block ml-2'>More</p>
         </div>
@@ -109,7 +112,7 @@ export default function NavLinks() {
         </div>
       </div>
 
-      <div className='w-full hidden md:flex justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0 bg-secondary dark:bg-secondary-dark'>
+      <div className='w-full hidden md:flex justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0 bg-secondary dark:bg-secondary-dark z-10'>
         <nav className='w-full lg:w-3/4 flex justify-between'>
           {links.map((link) => {
             const LinkIcon = link.icon;

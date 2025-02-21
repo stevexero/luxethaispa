@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #dab332;
+.font-lavishly {
+  font-family: var(--font-lavishly-yours), cursive;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e1e14;
-    --foreground: #dab332;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */

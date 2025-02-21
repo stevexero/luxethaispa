@@ -23,6 +23,9 @@ export default {
           dark: '#d5a21c',
         },
       },
+      fontFamily: {
+        lavishly: ['var(--font-lavishly-yours)', 'cursive'],
+      },
     },
   },
   plugins: [],
