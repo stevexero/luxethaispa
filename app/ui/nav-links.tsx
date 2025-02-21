@@ -1,42 +1,93 @@
 'use client';
 
 import { PiFlowerLotusBold } from 'react-icons/pi';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdDarkMode } from 'react-icons/md';
+import {
+  RiInfoCardFill,
+  RiMailAddFill,
+  RiChatHeartFill,
+  RiGiftFill,
+  RiCalendarScheduleFill,
+  RiMoonFill,
+  RiSunFill,
+  RiMenuFold2Fill,
+  RiMenu3Fill,
+  RiCloseFill,
+} from 'react-icons/ri';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useThemeStore } from './store';
+import { useState } from 'react';
 
 const links = [
   { name: 'Services', href: '/services', icon: PiFlowerLotusBold },
-  { name: 'About', href: '/about', icon: PiFlowerLotusBold },
-  { name: 'Contact', href: '/contact', icon: PiFlowerLotusBold },
-  { name: 'Testimonials', href: '/testimonials', icon: PiFlowerLotusBold },
-  { name: 'Gift Cards', href: '/gift-cards', icon: PiFlowerLotusBold },
-  { name: 'Schedule', href: '/schedule', icon: PiFlowerLotusBold },
+  { name: 'About', href: '/about', icon: RiInfoCardFill },
+  { name: 'Contact', href: '/contact', icon: RiMailAddFill },
+  { name: 'Testimonials', href: '/testimonials', icon: RiChatHeartFill },
+  { name: 'Gift Cards', href: '/gift-cards', icon: RiGiftFill },
+  { name: 'Schedule', href: '/schedule', icon: RiCalendarScheduleFill },
 ];
 
 export default function NavLinks() {
   const pathname = usePathname();
 
-  const [theme, setTheme] = useState(true);
+  const { theme, toggleTheme } = useThemeStore();
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleThemeChange = () => {
-    setTheme((prev) => !prev);
+    toggleTheme();
   };
 
-  useEffect(() => {
-    console.log(theme);
-  }, [theme]);
+  const handleMenuToggle = () => {
+    setMenuOpen((prev) => !prev);
+  };
 
   return (
     <>
-      <div className='w-full flex items-center justify-evenly py-4'>
-        <div className='flex flex-col items-center justify-center hover:text-amber-500 hover:cursor-pointer'>
-          <GiHamburgerMenu />
-          <p className='block'>More</p>
+      {/* Mobile */}
+      <div className='w-full flex md:hidden items-center justify-between p-4 bg-primary dark:bg-primary-dark'>
+        <Link href='/'>
+          <Image
+            src='/luxelogo_gold.png'
+            width={305}
+            height={189}
+            className='block w-32'
+            alt='LUXE Logo'
+          />
+        </Link>
+
+        <div
+          className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'
+          onClick={handleMenuToggle}
+        >
+          <RiMenu3Fill size={'1.4rem'} />
+        </div>
+      </div>
+
+      <div className='w-full flex md:hidden justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0 bg-secondary dark:bg-secondary-dark'>
+        <nav className='w-full lg:w-3/4 flex justify-center'>
+          <Link
+            href='/schedule'
+            className={clsx(
+              'flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500',
+              {
+                'bg-amber-50 text-amber-500': pathname === '/schedule',
+              }
+            )}
+          >
+            <RiCalendarScheduleFill />
+            <p className='block ml-2'>Schedule</p>
+          </Link>
+        </nav>
+      </div>
+
+      {/* Tablet & Desktop */}
+      <div className='w-full hidden md:flex items-center justify-evenly py-4 bg-primary dark:bg-primary-dark'>
+        <div className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'>
+          <RiMenuFold2Fill />
+          <p className='block ml-2'>More</p>
         </div>
 
         <Link href='/'>
@@ -50,25 +101,28 @@ export default function NavLinks() {
         </Link>
 
         <div
-          className='flex flex-col items-center justify-center hover:text-amber-500 hover:cursor-pointer'
+          className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'
           onClick={handleThemeChange}
         >
-          <MdDarkMode />
-          <p className='block'>Mode</p>
+          {theme === 'dark' ? <RiMoonFill /> : <RiSunFill />}
+          <p className='block ml-2'>Mode</p>
         </div>
       </div>
 
-      <div className='w-full flex justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0'>
-        <nav className='w-3/4 flex justify-between'>
+      <div className='w-full hidden md:flex justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0 bg-secondary dark:bg-secondary-dark'>
+        <nav className='w-full lg:w-3/4 flex justify-between'>
           {links.map((link) => {
             const LinkIcon = link.icon;
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={clsx('flex items-center hover:text-amber-500', {
-                  'bg-amber-50 text-amber-500': pathname === link.href,
-                })}
+                className={clsx(
+                  'flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500',
+                  {
+                    'bg-amber-50 text-amber-500': pathname === link.href,
+                  }
+                )}
               >
                 <LinkIcon />
                 <p className='block ml-2'>{link.name}</p>
@@ -77,6 +131,58 @@ export default function NavLinks() {
           })}
         </nav>
       </div>
+
+      {/* Menu Pop Up */}
+      {menuOpen ? (
+        <div className='w-full h-full fixed top-0 left-0 bg-primary dark:bg-primary-dark'>
+          <div className='w-full flex md:hidden items-center justify-between p-4 border-b-[0.5px] border-yellow-500'>
+            <Image
+              src='/luxelogo_gold.png'
+              width={305}
+              height={189}
+              className='block w-32'
+              alt='LUXE Logo'
+            />
+
+            <div
+              className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'
+              onClick={handleMenuToggle}
+            >
+              <RiCloseFill size={'1.4rem'} />
+            </div>
+          </div>
+
+          <div className='w-full flex flex-col items-center'>
+            <nav>
+              {links.map((link) => {
+                const LinkIcon = link.icon;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={clsx(
+                      'flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 mt-8',
+                      {
+                        'bg-amber-50 text-amber-500': pathname === link.href,
+                      }
+                    )}
+                  >
+                    <LinkIcon />
+                    <p className='block ml-2'>{link.name}</p>
+                  </Link>
+                );
+              })}
+              <div
+                className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer mt-8'
+                onClick={handleThemeChange}
+              >
+                {theme === 'dark' ? <RiMoonFill /> : <RiSunFill />}
+                <p className='block ml-2'>Mode</p>
+              </div>
+            </nav>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }
