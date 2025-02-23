@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
           <Link
             href='/schedule'
-            className='flex items-center mt-16 mb-8 self-center lg:self-end bg-primary-dark text-white p-6 rounded-sm hover:text-textPrimary-dark'
+            className='flex items-center mt-16 mb-8 self-center lg:self-end bg-primary-dark text-white p-6 rounded-sm hover:text-textPrimary-dark transition-all duration-200'
           >
             <p className='block text-xs md:text-lg md:mr-2'>
               Schedule a Visit Now

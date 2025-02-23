@@ -1,10 +1,11 @@
-import About from './sections/about';
-import Contact from './sections/contact';
-import GiftCards from './sections/giftcards';
+'use client';
+
+// import Contact from './sections/contact';
+// import GiftCards from './sections/giftcards';
 import Hero from './sections/hero';
-import Schedule from './sections/schedule';
+// import Schedule from './sections/schedule';
 import Services from './sections/services';
-import Testimonials from './sections/testimonials';
+// import Testimonials from './sections/testimonials';
 
 export default function Home() {
   return (
@@ -12,11 +13,10 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <About />
-        <Contact />
-        <Testimonials />
-        <GiftCards />
-        <Schedule />
+        {/* <Contact /> */}
+        {/* <Testimonials /> */}
+        {/* <GiftCards /> */}
+        {/* <Schedule /> */}
       </main>
     </div>
   );

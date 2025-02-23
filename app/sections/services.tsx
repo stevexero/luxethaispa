@@ -44,7 +44,7 @@ const cards = [
     description:
       'Acupressure, deep stretching, and rhythmic compression to enhance flexibility, relieve tension, and restore energy flow. Performed on a mat without oils, this ancient technique uses guided yoga-like movements and targeted pressure points to promote circulation, mobility, and deep relaxation while balancing the body’s natural energy.',
     href: 'thai',
-    position: '-top-16 -left-12',
+    position: 'top-24 -left-12',
     align: 'justify-self-center md:justify-self-end lg:justify-self-center',
   },
   {
@@ -64,7 +64,7 @@ const Services = () => {
       <h2 className='font-lavishly text-6xl text-center text-textPrimary-dark mt-4'>
         Our Services
       </h2>
-      <p className='mt-4 text-textPrimary font-light text-sm text-center'>
+      <p className='mt-4 text-textPrimary dark:text-textPrimary-dark font-light text-sm text-center'>
         Hover over the cards to learn more about our services
       </p>
       <div className='w-full flex items-center justify-center mt-4'>

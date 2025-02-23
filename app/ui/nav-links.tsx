@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { PiFlowerLotusBold } from 'react-icons/pi';
 import {
   RiInfoCardFill,
@@ -18,7 +19,6 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useThemeStore } from './store';
-import { useState } from 'react';
 
 const links = [
   { name: 'Services', href: '/services', icon: PiFlowerLotusBold },
@@ -35,6 +35,7 @@ export default function NavLinks() {
   const { theme, toggleTheme } = useThemeStore();
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showIcons, setShowIcons] = useState(false);
 
   const handleThemeChange = () => {
     toggleTheme();
@@ -43,6 +44,10 @@ export default function NavLinks() {
   const handleMenuToggle = () => {
     setMenuOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    setShowIcons(true);
+  }, []);
 
   return (
     <>
@@ -107,7 +112,7 @@ export default function NavLinks() {
           className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'
           onClick={handleThemeChange}
         >
-          {theme === 'dark' ? <RiMoonFill /> : <RiSunFill />}
+          {showIcons && (theme === 'dark' ? <RiMoonFill /> : <RiSunFill />)}
           <p className='block ml-2'>Mode</p>
         </div>
       </div>
