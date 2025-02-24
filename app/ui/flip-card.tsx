@@ -48,23 +48,19 @@ const FlipCard: React.FC<FlipCardInterface> = ({
             </h3>
           </div>
           {/* CARD PRICING */}
-          <div className='w-full text-xs font-bold'>
-            <table className='w-full border-y border-y-textPrimary-dark gold-text-no-anim'>
-              <tbody>
-                <tr className='gold-text-no-anim'>
-                  <td className='text-center'>60 mins</td>
-                  <td>${pricing60}</td>
-                </tr>
-                <tr className='gold-text-no-anim'>
-                  <td className='text-center'>90 mins</td>
-                  <td>${pricing90}</td>
-                </tr>
-                <tr className='gold-text-no-anim'>
-                  <td className='text-center'>120 mins</td>
-                  <td>${pricing120}</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className='w-full flex flex-col border-y border-y-textPrimary-dark gold-text-no-anim text-xs font-bold'>
+            <div className='grid grid-cols-2 place-items-center'>
+              <div className='text-center'>60 mins</div>
+              <div>${pricing60}</div>
+            </div>
+            <div className='grid grid-cols-2 place-items-center'>
+              <div className='text-center'>90 mins</div>
+              <div>${pricing90}</div>
+            </div>
+            <div className='grid grid-cols-2 place-items-center'>
+              <div className='text-center'>120 mins</div>
+              <div>${pricing120}</div>
+            </div>
           </div>
           {/* CARD DESCRIPTION */}
           <div className='px-8 text-justify overflow-y-scroll'>
