@@ -3,58 +3,92 @@ import FlipCard from '../ui/flip-card';
 
 const cards = [
   {
-    image: 'lt1.png',
+    image: 'a1.png',
     title: 'LUXE Signature Combo Massage',
     description:
       'Combines Eastern stretching techniques with Western Swedish massage, including back walking, deep-tissue work, and tailored body stretching. It helps relieve tension, improve flexibility, and promote deep relaxation for a refreshed and revitalized experience.',
     href: 'luxecombo',
-    position: 'top-16 -left-4',
     align: 'justify-self-center md:justify-self-end lg:justify-self-end',
+    pricing60: '80',
+    pricing90: '120',
+    pricing120: '160',
   },
   {
-    image: 'lt2.png',
+    image: 'a2.png',
     title: 'Swedish Massage',
     description:
       'Muscle manipulation and warm oils to relieve pain, release tension, and promote relaxation through effleurage techniques that soothe aching muscles.',
     href: 'swedish',
-    position: 'top-24 -right-12',
     align: 'justify-self-center md:justify-self-start lg:justify-self-center',
+    pricing60: '80',
+    pricing90: '120',
+    pricing120: '160',
   },
   {
-    image: 'lt3.png',
+    image: 'a3.png',
     title: 'Deep Tissue Massage',
     description:
       'Firm pressure and slow strokes to target deep layers of muscles and connective tissue, helping to release chronic tension, reduce pain, and improve mobility.',
     href: 'deeptissue',
-    position: 'top-16 left-12',
     align: 'justify-self-center md:justify-self-end lg:justify-self-start',
+    pricing60: '80',
+    pricing90: '120',
+    pricing120: '160',
   },
   {
-    image: 'lt4.png',
+    image: 'a4.png',
     title: 'Hot Stone Massage',
     description:
       'Smooth, heated stones placed on the body and combined with gentle massage techniques to relieve muscle tension, improve circulation, and promote deep relaxation.',
     href: 'hotstone',
-    position: '-top-16 -left-12',
     align: 'justify-self-center md:justify-self-start lg:justify-self-end',
+    pricing60: '90',
+    pricing90: '130',
+    pricing120: '180',
   },
   {
-    image: 'lt5.png',
+    image: 'a5.png',
     title: 'Traditional Thai Massage',
     description:
-      'Acupressure, deep stretching, and rhythmic compression to enhance flexibility, relieve tension, and restore energy flow. Performed on a mat without oils, this ancient technique uses guided yoga-like movements and targeted pressure points to promote circulation, mobility, and deep relaxation while balancing the body’s natural energy.',
+      'A blend of acupressure, deep stretching, and rhythmic compression to enhance flexibility, relieve tension, and restore energy flow. Performed on a mat without oils, it uses guided movements and pressure points to improve circulation and mobility.',
     href: 'thai',
-    position: 'top-24 -left-12',
     align: 'justify-self-center md:justify-self-end lg:justify-self-center',
+    pricing60: '90',
+    pricing90: '130',
+    pricing120: '180',
   },
   {
-    image: 'lt6.png',
+    image: 'a7.png',
+    title: 'Couple Massage',
+    description:
+      'Designed to enhance relaxation and connection, this side-by-side massage blends Thai techniques, acupressure, and soothing strokes to relieve tension, improve circulation, and promote deep relaxation.',
+    href: 'couples',
+    align: 'justify-self-center md:justify-self-end lg:justify-self-start',
+    pricing60: '160',
+    pricing90: '240',
+    pricing120: '320',
+  },
+  {
+    image: 'a8.png',
+    title: 'LUXE Four Hands Massage',
+    description:
+      'Designed for ultimate relaxation, this synchronized massage features two skilled therapists working in harmony to deliver a seamless blend of Thai techniques, deep pressure, and rhythmic movements.',
+    href: 'fourhands',
+    align: 'justify-self-center md:justify-self-end lg:justify-self-end',
+    pricing60: '160',
+    pricing90: '240',
+    pricing120: '320',
+  },
+  {
+    image: 'a6.png',
     title: 'Body Scrub / LUXE Combo',
     description:
-      'A rejuvenating blend of our Signature Thai Combination Massage and an exfoliating body scrub. Using a mix of sugar, salt, and essential oils, your therapist will gently exfoliate your skin, followed by a refreshing shower, leaving you feeling revitalized and silky smooth.',
+      '* $80 / 30 MINUTES.  A rejuvenating mix of Thai massage and full-body exfoliation with sugar, salt, and essential oils. Your therapist gently polishes your skin, followed by a refreshing shower, leaving you smooth, refreshed, and revitalized.',
     href: 'bodyscrubcombo',
-    position: '-bottom-16 -right-12',
-    align: 'justify-self-center md:justify-self-start lg:justify-self-start',
+    align: 'justify-self-center md:justify-self-start lg:justify-self-center',
+    pricing60: 'n/a',
+    pricing90: 'n/a',
+    pricing120: 'n/a',
   },
 ];
 
@@ -77,13 +111,18 @@ const Services = () => {
                 cardTitle={card.title}
                 cardDesc={card.description}
                 linkTo={card.href}
-                posTopLeft={card.position}
                 cardAlign={card.align}
+                pricing60={card.pricing60}
+                pricing90={card.pricing90}
+                pricing120={card.pricing120}
               />
             );
           })}
         </div>
       </div>
+      <h3 className='font-lavishly text-6xl text-center text-textPrimary-dark mt-12'>
+        Packages
+      </h3>
       <div className='mt-12'>
         <Link href='/services' className='text-center'>
           <p className='block text-lg mr-2 font-bold underline text-textPrimary-dark'>

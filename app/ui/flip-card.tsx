@@ -9,8 +9,10 @@ interface FlipCardInterface {
   cardTitle: string;
   cardDesc: string;
   linkTo: string;
-  posTopLeft: string;
   cardAlign: string;
+  pricing60: string;
+  pricing90: string;
+  pricing120: string;
 }
 
 const FlipCard: React.FC<FlipCardInterface> = ({
@@ -18,8 +20,10 @@ const FlipCard: React.FC<FlipCardInterface> = ({
   cardTitle,
   cardDesc,
   linkTo,
-  posTopLeft,
   cardAlign,
+  pricing60,
+  pricing90,
+  pricing120,
 }) => {
   return (
     <div
@@ -32,23 +36,47 @@ const FlipCard: React.FC<FlipCardInterface> = ({
           style={{ backgroundImage: `url('/${bgImg}')` }}
         >
           <div className='w-full h-16 bg-primary-dark border-t border-t-textPrimary-dark rounded-b-xl flex items-center justify-center'>
-            <h2 className='text-lg font-bold text-textPrimary-dark'>
-              {cardTitle}
-            </h2>
+            <h2 className='text-lg font-bold gold-text-no-anim'>{cardTitle}</h2>
           </div>
         </div>
-        {/* Back */}
-        <div className='absolute inset-0 flex flex-col items-center justify-between text-center shadow-lg rounded-xl border border-textPrimary-dark bg-primary-dark dark:bg-primary [transform:rotateY(180deg)] [backface-visibility:hidden] p-4 overflow-hidden dark:shadow-lg'>
-          <h3 className='text-white dark:text-primary-dark text-justify font-bold mt-2'>
-            {cardTitle}
-          </h3>
-          <p className='text-white dark:text-primary-dark text-justify text-sm mt-4'>
-            {cardDesc}
-          </p>
-          <div className='flex flex-col items-center'>
+        {/* BACK */}
+        <div className='absolute inset-0 flex flex-col items-center shadow-lg rounded-xl border border-textPrimary-dark bg-primary-dark dark:bg-primary [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden dark:shadow-lg'>
+          {/* CARD TITLE */}
+          <div className='w-full p-4 text-center'>
+            <h3 className='gold-text-no-anim font-bold mt-2 text-md'>
+              {cardTitle}
+            </h3>
+          </div>
+          {/* CARD PRICING */}
+          <div className='w-full text-xs font-bold'>
+            <table className='w-full border-y border-y-textPrimary-dark gold-text-no-anim'>
+              <tbody>
+                <tr className='gold-text-no-anim'>
+                  <td className='text-center'>60 mins</td>
+                  <td>${pricing60}</td>
+                </tr>
+                <tr className='gold-text-no-anim'>
+                  <td className='text-center'>90 mins</td>
+                  <td>${pricing90}</td>
+                </tr>
+                <tr className='gold-text-no-anim'>
+                  <td className='text-center'>120 mins</td>
+                  <td>${pricing120}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {/* CARD DESCRIPTION */}
+          <div className='px-8 text-justify overflow-y-scroll'>
+            <p className='light-gold-text-no-anim mt-4 text-sm font-semibold'>
+              {cardDesc}
+            </p>
+          </div>
+          {/* CARD LINKS */}
+          <div className='flex flex-col items-center mt-auto pb-4'>
             <Link
               href='/schedule'
-              className='flex items-center mt-16 mb-8 self-center bg-textPrimary-dark dark:bg-primary-dark text-primary-dark dark:text-white py-4 px-8 rounded-xl shadow-xl hover:scale-105 transition-all duration-200'
+              className='relative flex items-center self-center gold-button py-4 px-8 rounded-xl shadow-xl overflow-hidden text-white'
             >
               <p className='block text-lg mr-2'>Book Now</p>
               <RiCalendarScheduleFill />
@@ -56,17 +84,18 @@ const FlipCard: React.FC<FlipCardInterface> = ({
 
             <Link
               href={`/massages/${linkTo}`}
-              className='flex items-center self-center text-textPrimary-dark hover:opacity-75 transition-all duration-200'
+              className='flex items-center self-center text-textPrimary-dark hover:opacity-75 transition-all duration-200 mt-4'
             >
               <p className='block text-sm mr-2'>Learn More</p>
               <RiArrowDropRightLine />
             </Link>
           </div>
+          {/* BG IMG */}
           <Image
             src='/lotusbg.png'
             width={190}
             height={254}
-            className={`absolute ${posTopLeft} opacity-10 scale-150 -z-10`}
+            className='absolute opacity-5 scale-150 -z-10 top-32'
             alt='lotus bg'
           />
         </div>

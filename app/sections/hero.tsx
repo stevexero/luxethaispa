@@ -12,7 +12,7 @@ const Hero = () => {
         <div className='flex flex-col'>
           <h1 className='flex flex-col text-center text-textPrimary-dark'>
             <span className='font-lavishly text-5xl'>Welcome to</span>
-            <span className='font-extrabold text-7xl'>LUXE</span>
+            <span className='font-extrabold text-7xl gold-text'>LUXE</span>
             <span className='font-semibold mt-2'>Thai Spa & Massage</span>
           </h1>
 

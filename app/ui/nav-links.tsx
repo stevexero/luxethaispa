@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { PiFlowerLotusBold } from 'react-icons/pi';
 import {
   RiInfoCardFill,
@@ -10,7 +11,7 @@ import {
   RiCalendarScheduleFill,
   RiMoonFill,
   RiSunFill,
-  RiMenuFold2Fill,
+  //   RiMenuFold2Fill,
   RiMenu3Fill,
   RiCloseFill,
 } from 'react-icons/ri';
@@ -35,7 +36,7 @@ export default function NavLinks() {
   const { theme, toggleTheme } = useThemeStore();
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showIcons, setShowIcons] = useState(false);
+  //   const [showIcons, setShowIcons] = useState(false);
 
   const handleThemeChange = () => {
     toggleTheme();
@@ -45,9 +46,9 @@ export default function NavLinks() {
     setMenuOpen((prev) => !prev);
   };
 
-  useEffect(() => {
-    setShowIcons(true);
-  }, []);
+  //   useEffect(() => {
+  //     setShowIcons(true);
+  //   }, []);
 
   return (
     <>
@@ -90,17 +91,17 @@ export default function NavLinks() {
 
       {/* Tablet & Desktop */}
       <div className='w-full hidden md:flex items-center justify-evenly py-4 bg-primary dark:bg-primary-dark'>
-        <div
+        {/* <div
           className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'
           onClick={handleMenuToggle}
         >
           <RiMenuFold2Fill />
           <p className='block ml-2'>More</p>
-        </div>
+        </div> */}
 
         <Link href='/'>
           <Image
-            src='/luxelogo_gold.png'
+            src='/luxelogo_gold2.png'
             width={305}
             height={189}
             className='block w-56'
@@ -108,13 +109,13 @@ export default function NavLinks() {
           />
         </Link>
 
-        <div
+        {/* <div
           className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer'
           onClick={handleThemeChange}
         >
           {showIcons && (theme === 'dark' ? <RiMoonFill /> : <RiSunFill />)}
           <p className='block ml-2'>Mode</p>
-        </div>
+        </div> */}
       </div>
 
       <div className='w-full hidden md:flex justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0 bg-secondary dark:bg-secondary-dark z-10'>

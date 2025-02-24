@@ -5,3 +5,75 @@
 .font-lavishly {
   font-family: var(--font-lavishly-yours), cursive;
 }
+
+@keyframes gold-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gold-text {
+  background-image: linear-gradient(
+    160deg,
+    #a54e07,
+    #b47e11,
+    #fef1a2,
+    #bc881b,
+    #a54e07
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gold-shine 20s linear infinite;
+}
+
+.gold-text-no-anim {
+  background-image: linear-gradient(160deg, #bc881b, #fef1a2, #bc881b);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 100% 100%;
+}
+
+.light-gold-text-no-anim {
+  background-image: linear-gradient(160deg, #fee4a9, #ffea82, #fee4a9);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 100% 100%;
+}
+
+.gold-button {
+  background-image: linear-gradient(
+    160deg,
+    #a54e07,
+    #b47e11,
+    #fef1a2,
+    #bc881b,
+    #a54e07
+  );
+  border: none;
+  background-size: 200% auto;
+  transition: transform 0.2s ease-in-out, background-position 1s ease-in-out;
+}
+
+.gold-button:hover {
+  background-position: right center;
+  transform: scale(1.05);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
