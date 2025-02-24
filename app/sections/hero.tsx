@@ -16,11 +16,11 @@ const Hero = () => {
             <span className='font-semibold mt-2'>Thai Spa & Massage</span>
           </h1>
 
-          <h2 className='mt-8 text-center text-textPrimary italic font-semibold text-sm'>
+          <h2 className='mt-8 text-center text-textPrimary italic font-bold'>
             Experience the Art of Healing Through Traditional Thai Massage
           </h2>
 
-          <p className='mt-4 text-textPrimary font-light text-sm text-center lg:text-left'>
+          <p className='mt-4 text-textPrimary font-semibold text-center lg:text-left'>
             Nestled in the heart of Las Vegas, LUXE offers an authentic Thai spa
             experience that blends ancient healing techniques with modern
             relaxation. Whether you&apos;re seeking relief from stress, muscle

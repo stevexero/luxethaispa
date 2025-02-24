@@ -63,7 +63,7 @@ const cards = [
     description:
       'Designed to enhance relaxation and connection, this side-by-side massage blends Thai techniques, acupressure, and soothing strokes to relieve tension, improve circulation, and promote deep relaxation.',
     href: 'couples',
-    align: 'justify-self-center md:justify-self-end lg:justify-self-start',
+    align: 'justify-self-center md:justify-self-start lg:justify-self-start',
     pricing60: '160',
     pricing90: '240',
     pricing120: '320',
