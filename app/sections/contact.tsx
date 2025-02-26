@@ -2,7 +2,7 @@ import Map from '../ui/map';
 
 const Contact = () => {
   return (
-    <div className='w-full flex flex-col md:flex-row flex-col-reverse items-start justify-center mt-12 border-t border-b border-t-textPrimary-dark border-b-textPrimary-dark'>
+    <div className='w-full flex flex-col-reverse md:flex-row items-start justify-center mt-12 border-t border-b border-t-textPrimary-dark border-b-textPrimary-dark'>
       <div className='w-full md:w-1/2 relative p-4 md:p-0'>
         <Map lat={36.113919} lng={-115.20711} zoom={16} />
       </div>
