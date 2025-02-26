@@ -72,7 +72,7 @@ export default function NavLinks() {
         </div>
       </div>
 
-      <div className='w-full flex md:hidden justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0 bg-secondary dark:bg-secondary-dark'>
+      <div className='w-full flex md:hidden justify-center border-t-[0.5px] border-b-[0.5px] border-yellow-500 p-4 sticky top-0 bg-secondary dark:bg-secondary-dark z-10'>
         <nav className='w-full lg:w-3/4 flex justify-center'>
           <Link
             href='/schedule'
