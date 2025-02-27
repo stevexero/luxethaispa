@@ -35,12 +35,12 @@ const FlipCard: React.FC<FlipCardInterface> = ({
           className='absolute inset-0 flex flex-col items-center justify-end text-center rounded-xl border border-textPrimary-dark [backface-visibility:hidden] bg-no-repeat bg-cover bg-center dark:shadow-lg'
           style={{ backgroundImage: `url('/${bgImg}')` }}
         >
-          <div className='w-full h-16 bg-primary-dark border-t border-t-textPrimary-dark rounded-b-xl flex items-center justify-center'>
+          <div className='w-full h-16 bg-gradient-to-br from-green-950 via-emerald-800 to-black border-t border-t-textPrimary-dark rounded-b-xl flex items-center justify-center'>
             <h2 className='text-lg font-bold gold-text-no-anim'>{cardTitle}</h2>
           </div>
         </div>
         {/* BACK */}
-        <div className='absolute inset-0 flex flex-col items-center shadow-lg rounded-xl border border-textPrimary-dark bg-primary-dark dark:bg-primary [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden dark:shadow-lg'>
+        <div className='absolute inset-0 flex flex-col items-center shadow-lg rounded-xl border border-textPrimary-dark bg-gradient-to-br from-green-950 via-emerald-800 to-black [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden dark:shadow-lg'>
           {/* CARD TITLE */}
           <div className='w-full p-4 text-center'>
             <h3 className='gold-text-no-anim font-bold mt-2 text-md'>
@@ -63,7 +63,7 @@ const FlipCard: React.FC<FlipCardInterface> = ({
             </div>
           </div>
           {/* CARD DESCRIPTION */}
-          <div className='px-8 text-justify overflow-y-scroll'>
+          <div className='px-8 text-left overflow-y-scroll'>
             <p className='light-gold-text-no-anim mt-4 text-sm font-semibold'>
               {cardDesc}
             </p>

@@ -14,7 +14,7 @@ const cards = [
     pricing120: '160',
   },
   {
-    image: 'a5.png',
+    image: 'b_swedish2.png',
     title: 'Swedish Massage',
     description:
       'Muscle manipulation and warm oils to relieve pain, release tension, and promote relaxation through effleurage techniques that soothe aching muscles.',
@@ -25,7 +25,7 @@ const cards = [
     pricing120: '160',
   },
   {
-    image: 'a3.png',
+    image: 'b_deep_tissue.png',
     title: 'Deep Tissue Massage',
     description:
       'Firm pressure and slow strokes to target deep layers of muscles and connective tissue, helping to release chronic tension, reduce pain, and improve mobility.',
@@ -36,7 +36,7 @@ const cards = [
     pricing120: '160',
   },
   {
-    image: 'a4.png',
+    image: 'b_stones.png',
     title: 'Hot Stone Massage',
     description:
       'Smooth, heated stones placed on the body and combined with gentle massage techniques to relieve muscle tension, improve circulation, and promote deep relaxation.',
@@ -47,10 +47,10 @@ const cards = [
     pricing120: '180',
   },
   {
-    image: 'a9.png',
+    image: 'b_traditional_thai.png',
     title: 'Traditional Thai Massage',
     description:
-      'A blend of acupressure, deep stretching, and rhythmic compression to enhance flexibility, relieve tension, and restore energy flow. Performed on a mat without oils, it uses guided movements and pressure points to improve circulation and mobility.',
+      'A blend of acupressure, deep stretching, and rhythmic compression to enhance flexibility, relieve tension, and restore energy flow. Performed without oils, it uses guided movements and pressure points to improve circulation and mobility.',
     href: 'thai',
     align: 'justify-self-center md:justify-self-end lg:justify-self-center',
     pricing60: '90',
@@ -58,7 +58,7 @@ const cards = [
     pricing120: '180',
   },
   {
-    image: 'a7.png',
+    image: 'b_couples.png',
     title: 'Couple Massage',
     description:
       'Designed to enhance relaxation and connection, this side-by-side massage blends Thai techniques, acupressure, and soothing strokes to relieve tension, improve circulation, and promote deep relaxation.',
@@ -69,7 +69,7 @@ const cards = [
     pricing120: '320',
   },
   {
-    image: 'a8.png',
+    image: 'b_four_hands.png',
     title: 'LUXE Four Hands Massage',
     description:
       'Designed for ultimate relaxation, this synchronized massage features two skilled therapists working in harmony to deliver a seamless blend of Thai techniques, deep pressure, and rhythmic movements.',
@@ -86,6 +86,17 @@ const cards = [
       '* $80 / 30 MINUTES.  A rejuvenating mix of Thai massage and full-body exfoliation with sugar, salt, and essential oils. Your therapist gently polishes your skin, followed by a refreshing shower, leaving you smooth, refreshed, and revitalized.',
     href: 'bodyscrubcombo',
     align: 'justify-self-center md:justify-self-start lg:justify-self-center',
+    pricing60: 'n/a',
+    pricing90: 'n/a',
+    pricing120: 'n/a',
+  },
+  {
+    image: 'b_facial.png',
+    title: 'Basic Facial',
+    description:
+      '* $60 / 30 MINUTES or $115 / 60 MINUTES.  Designed to cleanse, exfoliate, facial mask, and hydrate your skin. Remove impurities, unclog pores, and restore moisture, leaving your skin feeling fresh, smooth, and radiant. Ideal for all skin types.',
+    href: 'basicfacial',
+    align: 'justify-self-center md:justify-self-end lg:justify-self-start',
     pricing60: 'n/a',
     pricing90: 'n/a',
     pricing120: 'n/a',
@@ -140,7 +151,7 @@ const Services = () => {
             $200 / 2 hours
           </p>
           <div className='w-full flex items-center justify-center mt-8'>
-            <button className='bg-primary-dark px-8 py-4 text-white rounded-md shadow-2xl shadow-textPrimary hover:scale-105 transition-all duration-200'>
+            <button className='bg-gradient-to-br from-green-950 via-emerald-800 to-black px-8 py-4 text-white rounded-md shadow-2xl shadow-textPrimary hover:scale-105 transition-all duration-200'>
               Schedule Now
             </button>
           </div>
@@ -160,7 +171,7 @@ const Services = () => {
             $160 / 2 hours
           </p>
           <div className='w-full flex items-center justify-center mt-8'>
-            <button className='bg-primary-dark px-8 py-4 text-white rounded-md shadow-2xl shadow-textPrimary hover:scale-105 transition-all duration-200'>
+            <button className='bg-gradient-to-br from-green-950 via-emerald-800 to-black px-8 py-4 text-white rounded-md shadow-2xl shadow-textPrimary hover:scale-105 transition-all duration-200'>
               Schedule Now
             </button>
           </div>
@@ -183,7 +194,7 @@ const Services = () => {
             $190 / 120 minutes
           </p>
           <div className='w-full flex items-center justify-center mt-8'>
-            <button className='bg-primary-dark px-8 py-4 text-white rounded-md shadow-2xl shadow-textPrimary hover:scale-105 transition-all duration-200'>
+            <button className='bg-gradient-to-br from-green-950 via-emerald-800 to-black px-8 py-4 text-white rounded-md shadow-2xl shadow-textPrimary hover:scale-105 transition-all duration-200'>
               Schedule Now
             </button>
           </div>

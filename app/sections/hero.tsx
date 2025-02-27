@@ -8,7 +8,7 @@ const Hero = () => {
         className='relative w-full bg-no-repeat bg-cover bg-center'
         style={{ backgroundImage: "url('/sideimg2.png')" }}
       ></div>
-      <div className='flex items-center justify-center bg-primary p-24 pb-0'>
+      <div className='flex items-center justify-center bg-primary p-8 md:p-24 pb-0'>
         <div className='flex flex-col'>
           <h1 className='flex flex-col text-center text-textPrimary-dark'>
             <span className='font-lavishly text-5xl'>Welcome to</span>
@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
           <Link
             href='/schedule'
-            className='flex items-center mt-16 mb-8 self-center lg:self-end bg-primary-dark text-white p-6 rounded-sm hover:text-textPrimary-dark transition-all duration-200'
+            className='flex items-center mt-16 mb-8 self-center lg:self-end bg-gradient-to-br from-green-950 via-emerald-800 to-black text-white p-6 rounded-md hover:scale-105 hover:shadow-xl transition-all duration-200'
           >
             <p className='block text-xs md:text-lg md:mr-2'>
               Schedule a Visit Now
