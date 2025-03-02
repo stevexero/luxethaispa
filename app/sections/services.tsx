@@ -168,7 +168,7 @@ const Services = () => {
             60 minute massage and hot stones. 60 minutes basic facial.
           </p>
           <p className='font-bold text-xl text-primary-dark text-center drop-shadow-[0_1px_0.25px_rgba(255,255,255,1)] mt-4'>
-            $160 / 2 hours
+            $180 / 2 hours
           </p>
           <div className='w-full flex items-center justify-center mt-8'>
             <button className='bg-gradient-to-br from-green-950 via-emerald-800 to-black px-8 py-4 text-white rounded-md shadow-2xl shadow-textPrimary hover:scale-105 transition-all duration-200'>
