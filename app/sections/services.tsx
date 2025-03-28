@@ -36,7 +36,7 @@ const cards = [
     pricing120: '160',
   },
   {
-    image: 'b_stones.png',
+    image: 'c_stones.png',
     title: 'Hot Stone Massage',
     description:
       'Smooth, heated stones placed on the body and combined with gentle massage techniques to relieve muscle tension, improve circulation, and promote deep relaxation.',
@@ -69,7 +69,7 @@ const cards = [
     pricing120: '320',
   },
   {
-    image: 'b_four_hands.png',
+    image: 'c_four_hands.png',
     title: 'LUXE Four Hands Massage',
     description:
       'Designed for ultimate relaxation, this synchronized massage features two skilled therapists working in harmony to deliver a seamless blend of Thai techniques, deep pressure, and rhythmic movements.',
@@ -80,18 +80,18 @@ const cards = [
     pricing120: '320',
   },
   {
-    image: 'a2.png',
-    title: 'Body Scrub',
+    image: 'c_body_scrub.png',
+    title: 'Body Scrub + LUXE Signature Massage',
     description:
-      '* $80 / 30 MINUTES.  A rejuvenating mix of Thai massage and full-body exfoliation with sugar, salt, and essential oils. Your therapist gently polishes your skin, followed by a refreshing shower, leaving you smooth, refreshed, and revitalized.',
+      'A rejuvenating mix of Thai massage and full-body exfoliation with sugar, salt, and essential oils. Your therapist gently polishes your skin, followed by a refreshing shower, leaving you smooth, refreshed, and revitalized.',
     href: 'bodyscrubcombo',
     align: 'justify-self-center md:justify-self-start lg:justify-self-center',
-    pricing60: 'n/a',
-    pricing90: 'n/a',
+    pricing60: '110',
+    pricing90: '150',
     pricing120: 'n/a',
   },
   {
-    image: 'b_facial.png',
+    image: 'c_basic_facial.png',
     title: 'Basic Facial',
     description:
       '* $60 / 30 MINUTES or $115 / 60 MINUTES.  Designed to cleanse, exfoliate, facial mask, and hydrate your skin. Remove impurities, unclog pores, and restore moisture, leaving your skin feeling fresh, smooth, and radiant. Ideal for all skin types.',
