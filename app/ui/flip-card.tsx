@@ -10,6 +10,7 @@ interface FlipCardInterface {
   cardDesc: string;
   linkTo: string;
   cardAlign: string;
+  pricing30?: string;
   pricing60: string;
   pricing90: string;
   pricing120: string;
@@ -21,6 +22,7 @@ const FlipCard: React.FC<FlipCardInterface> = ({
   cardDesc,
   linkTo,
   cardAlign,
+  pricing30,
   pricing60,
   pricing90,
   pricing120,
@@ -49,18 +51,33 @@ const FlipCard: React.FC<FlipCardInterface> = ({
           </div>
           {/* CARD PRICING */}
           <div className='w-full flex flex-col border-y border-y-textPrimary-dark gold-text-no-anim text-xs font-bold'>
-            <div className='grid grid-cols-2 place-items-center'>
-              <div className='text-center'>60 mins</div>
-              <div>${pricing60}</div>
-            </div>
-            <div className='grid grid-cols-2 place-items-center'>
-              <div className='text-center'>90 mins</div>
-              <div>${pricing90}</div>
-            </div>
-            <div className='grid grid-cols-2 place-items-center'>
-              <div className='text-center'>120 mins</div>
-              <div>${pricing120}</div>
-            </div>
+            {pricing30 ? (
+              <>
+                <div className='grid grid-cols-2 place-items-center'>
+                  <div className='text-center'>30 mins</div>
+                  <div>${pricing30}</div>
+                </div>
+                <div className='grid grid-cols-2 place-items-center'>
+                  <div className='text-center'>60 mins</div>
+                  <div>${pricing60}</div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className='grid grid-cols-2 place-items-center'>
+                  <div className='text-center'>60 mins</div>
+                  <div>${pricing60}</div>
+                </div>
+                <div className='grid grid-cols-2 place-items-center'>
+                  <div className='text-center'>90 mins</div>
+                  <div>${pricing90}</div>
+                </div>
+                <div className='grid grid-cols-2 place-items-center'>
+                  <div className='text-center'>120 mins</div>
+                  <div>${pricing120}</div>
+                </div>
+              </>
+            )}
           </div>
           {/* CARD DESCRIPTION */}
           <div className='px-8 text-left overflow-y-scroll'>

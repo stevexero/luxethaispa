@@ -97,8 +97,9 @@ const cards = [
       'Designed to cleanse, exfoliate, facial mask, and hydrate your skin. Remove impurities, unclog pores, and restore moisture, leaving your skin feeling fresh, smooth, and radiant. Ideal for all skin types.',
     href: 'basicfacial',
     align: 'justify-self-center md:justify-self-end lg:justify-self-start',
-    pricing60: '60',
-    pricing90: '115',
+    pricing30: '60',
+    pricing60: '115',
+    pricing90: 'n/a',
     pricing120: 'n/a',
   },
 ];
@@ -123,6 +124,7 @@ const Services = () => {
                 cardDesc={card.description}
                 linkTo={card.href}
                 cardAlign={card.align}
+                pricing30={card.pricing30}
                 pricing60={card.pricing60}
                 pricing90={card.pricing90}
                 pricing120={card.pricing120}
