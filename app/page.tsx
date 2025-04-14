@@ -1,5 +1,3 @@
-'use client';
-
 // import GiftCards from './sections/giftcards';
 import Hero from './sections/hero';
 // import Schedule from './sections/schedule';
