@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Lavishly_Yours } from 'next/font/google';
 import './globals.css';
-import Navbar from './ui/navbar';
-import Footer from './ui/footer';
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: 'A luxury thai spa and massage experience',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

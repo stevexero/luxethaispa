@@ -9,15 +9,12 @@ import {
   RiChatHeartFill,
   RiGiftFill,
   RiCalendarScheduleFill,
-  RiMoonFill,
-  RiSunFill,
   RiMenu3Fill,
   RiCloseFill,
 } from 'react-icons/ri';
 import Link from 'next/link';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { useThemeStore } from './store';
 
 const links = [
   { name: 'Services', href: '/services', icon: PiFlowerLotusBold },
@@ -32,13 +29,7 @@ export default function NavLinks() {
   const pathname = usePathname();
   const isAuthRoute = pathname.startsWith('/dashboard');
 
-  const { theme, toggleTheme } = useThemeStore();
-
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleThemeChange = () => {
-    toggleTheme();
-  };
 
   const handleMenuToggle = () => {
     setMenuOpen((prev) => !prev);
@@ -171,13 +162,6 @@ export default function NavLinks() {
                         </Link>
                       );
                     })}
-                    <div
-                      className='flex items-center text-textPrimary dark:text-textPrimary-dark hover:text-amber-500 hover:dark:text-amber-500 hover:cursor-pointer mt-8'
-                      onClick={handleThemeChange}
-                    >
-                      {theme === 'dark' ? <RiMoonFill /> : <RiSunFill />}
-                      <p className='block ml-2'>Mode</p>
-                    </div>
                   </nav>
                 </div>
               </div>
